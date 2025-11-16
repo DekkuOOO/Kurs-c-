@@ -1,0 +1,82 @@
+zad 1 petla for
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main() 
+{
+	for (int a = 0; a <= 10; a++) {
+		cout << a << endl;
+	}
+zadanie 2 przy uzyciu while 
+int main() 
+{
+	int a = 2;
+
+	while (a <= 20) {
+		cout << a << " " << endl;
+		a += 2;//
+	}
+
+
+
+
+
+}
+zadanie 3
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main() 
+{
+	for (int a = 100; a >= 1; a--) {
+		cout << a << endl;
+	}
+
+
+
+
+
+}
+zadanie 4 sumowanie petla
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main() 
+{
+	int suma = 0;
+	for (int a = 1; a <= 100; a++) {
+		suma += a;
+	}
+
+	cout << "suma liczb od 1 do 100 wynosi:" << suma << endl;
+
+
+
+}
+zad 5 potengowanie na for
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main() 
+{
+	for (int a = 1; a <= 10; a++) {
+		cout << a * a << " ";
+}
+
+
+}
+zadanie 6 petla do...while
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main() 
+{
+	int liczba;
+
+	do {
+		cout << "podaj liczbe(0 konczy program):";
+		cin >> liczba;
+	} while (liczba != 0);
+		cout << "koniec programu." << endl;
+
+}
