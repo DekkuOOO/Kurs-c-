@@ -80,3 +80,22 @@ int main()
 		cout << "koniec programu." << endl;
 
 }
+zad 7 policzenie sumy liczb petel
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main() 
+{
+	int liczba;
+	int suma = 0;
+
+	cout << "podaj liczbe:" << endl;
+	cin >> liczba;
+
+	while (liczba > 0) {
+		suma += liczba % 10;
+		liczba /= 10;
+	}
+	cout << "suma cyfr wynosi" << suma << endl;
+
+}
