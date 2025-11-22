@@ -111,3 +111,29 @@ int main()
 
 
 }
+zadanie 5
+#include<iostream>
+
+using namespace std;
+ int main() 
+ {
+	 int n;
+	 cout << "Podaj liczbe: ";
+	 cin >> n; 
+
+	 bool pierwsza = true;
+
+	 if (n < 2) {
+		 pierwsza = false;
+	 }
+	 else {
+		 for (int i = 2; i * i <= n; i++) {
+			 if (n % i == 0) {
+				 pierwsza = false;
+				 break;
+			 }
+		 }
+	 }
+	 if (pierwsza) cout << n << "jest liczba pierwsza. " << endl;
+	 else cout << "liczba nie jest pierwsza" << endl;
+	 
