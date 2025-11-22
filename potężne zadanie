@@ -1,0 +1,115 @@
+#include<iostream>
+#include<math.h>
+#include<cmath>
+using namespace std;
+
+int roznica(int a, int b) {
+	return a - b;
+}
+int iloczyn(int p, int o) {
+	return p * o;
+}
+double ogólna_srednia(double i, double u) {
+	return (i + u) / 2.0;
+}
+bool czy_parzysta(int h) {
+	return (h % 2 == 0);
+}
+int wartosc_bezwzgledna(int r) {
+	if (r < 0)
+		return -r;
+	else
+		return r;
+}
+double pole_prostokata(double n, double m) {
+	return n * m;
+}
+double pole_kola(double j) {
+	const double PI = 3.14;
+	return PI *j * j;
+}
+double obwod(double t) {
+	return 4 * t;
+}
+int minimum(int f, int s) {
+	if (f < s)
+		return f;
+	else
+		return s;
+}
+int maximum(int es, int ed) {
+	if (es > ed)
+		return es;
+	else
+		return ed;
+}
+int main() {
+	int x, y;
+	cout << "podaj pierwsza liczbe" << endl;
+	cin >> x;
+	cout << "podaj druga liczbe" << endl;
+	cin >> y;
+
+	cout << "roznica wynosi: " << roznica(x, y) << endl;
+	cout << "iloczyn wynosi: " << iloczyn(x, y) << endl;
+	double q, e;
+	cout << "podaj pierwsza liczbe do sredniej" << endl;
+	cin >> q;
+	cout << "podaj druga liczbe do sredniej" << endl;
+	cin >> e;
+
+	cout << "srednia wynosi: " << ogólna_srednia(q, e) << endl;
+	int liczba;
+	cout << "podaj losowa liczbe" << endl;
+	cin >> liczba;
+
+	if (czy_parzysta(liczba)) {
+		cout << "liczba jest parzysta" << endl;
+	}
+	else {
+		cout << "liczba nie jest parzysta" << endl;
+	}
+	int cyfry;
+
+	cout << "podaj liczbe: " << endl;
+	cin >> cyfry;
+
+	cout << "Wartosc bezwzgledna wynosi: " << wartosc_bezwzgledna(cyfry) << endl;
+	double bok1, bok2;
+
+	cout << "Podaj pierwszy bok" << endl;
+	cin >> bok1;
+	cout << "Podaj drugi bok" << endl;
+	cin >> bok2;
+
+	cout << "Pole prostokata wynosi: " << pole_prostokata(bok1, bok2)<< endl;
+	
+	double promien;
+
+	cout << "podaj promien" << endl;
+	cin >> promien;
+
+	cout << "pole kola wynosi: " << pole_kola(promien) << endl;
+
+	double bok;
+	cout << "podaj wymiar boku" << endl;
+	cin >> bok;
+
+	cout << "obwod kwadratu wynosi: " << obwod(bok) << endl;
+	int az, ax;
+	cout << "podaj liczbe numer 1" << endl;
+	cin >> az;
+	cout << "podaj liczbe numer 2" << endl;
+	cin >> ax;
+
+	cout << "liczba" << minimum(az, ax) << "jest mniejsza" << endl;
+	int ab, af;
+	cout << "podaj pierwsza cyfre" << endl;
+	cin >> ab;
+	cout << "podaj druga cyfre" << endl;
+	cin >> af;
+
+
+	cout << "liczba" << maximum(ab, af) << "jest wieksza" << endl;
+
+}
