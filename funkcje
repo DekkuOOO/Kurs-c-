@@ -47,3 +47,27 @@ int main() {
 	cin >> a;
 	cout << Wynik( a ) << " To wynik " << endl;
 }
+zad 5 wyliczanie silni przez funkcje
+#include<iostream>
+
+using namespace std;
+
+// funkcja rekurencyjna licząca silnię
+long long silnia(int a) {
+	if (a <= 1)     //warunek brzegowy
+		return 1;
+	else
+		return a * silnia(a - 1);   //wywołanie rekurencji
+}
+int main(){
+	int a;
+	cout << "podaj liczbe: ";
+	cin >> a;
+
+	cout << a << "! = " << silnia(a) << endl;
+	return 0;
+}
+
+
+
+
