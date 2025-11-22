@@ -99,3 +99,16 @@ int main()
 	cout << "suma cyfr wynosi" << suma << endl;
 
 }
+zadanie 8 tabliczka mnożenia
+#include<iostream>
+
+using namespace std;
+ int main() {
+	 int a, m, i;
+	 cout << "podaj liczbe do pomnozenia";
+	 cin >> a;
+	 for (int i = 1; i <= 10; i++) {
+		 cout << a << "x" << i << "=" << a * i << endl;
+	}
+	 
+}
