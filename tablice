@@ -1,0 +1,83 @@
+Zad 1
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int tab[5];
+
+	cout << "podaj 5 liczb calkowitych:\n" << endl;
+	for (int i = 0; i < 5; i++) {
+		cin >> tab[i];
+	}
+	cout << "Wpisywane liczby: " << endl;
+	for (int i = 0; i < 5; i++) {
+		cout << tab[i] << " ";
+	}
+	return 0;
+
+
+
+}
+zad 2 sumowanie tablicami
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int tab[10];
+	int suma = 0;
+
+	cout << "podaj dziesiec liczb:\n " << endl;
+
+	for (int i = 0; i < 10; i++) {
+		cin >> tab[i];
+		suma += tab[i];
+	}
+	cout << "suma liczb wynosi: " << suma << endl;
+	return 0;
+}
+zad 3 wyliczanie sredniej
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	double tab[8];
+	double suma = 0;
+
+	cout << "podaj 8 liczb:\n " << endl;
+	for (int i = 1; i < 8; i++) {
+		cin >> tab[i];
+		suma += tab[i];
+	}
+	double srednia = suma / 8.00;
+	
+	cout << fixed << setprecision(2);
+	cout << "srednia wynosi: " << srednia << endl;
+
+	return 0;
+}
+zad 4 minimalna i maksymalna wartosc
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int tab[10];
+	cout << "podaj 10 liczb:\n" << endl;
+	for (int i = 0; i < 10; i++) {
+		cin >> tab[i];
+	}
+	int min = tab[0];
+	int max = tab[0];
+
+	for (int i = 0; i < 10; i++) {
+		if (tab[i] < min)min = tab[i];
+		if (tab[i] > max)max = tab[i];
+	}
+	cout << "minimalna wartosc: " << min << endl;
+	cout << "maksymalna wartosc: " << max << endl;
+
+	return 0;
+}
