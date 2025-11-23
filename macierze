@@ -1,0 +1,141 @@
+zad 1 macierz 3x3
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int matrix[3][3];
+	      
+	cout << "podaj 9 liczb do macierzy 3x3:\n" << endl;
+
+	//wczytywanie macierzy
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			cout << "podaj element [" << i + 1 << "," << j + 1 << "]:" << endl;
+			cin >> matrix[i][j];
+		}
+	}
+	//wysietlanie macierzy
+	cout << "\nMacierz 3x3:\n";
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			cout << matrix[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	return 0;
+}
+zad 2 obliczenie sumy i wypisanie wynikow przy macierzach
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int matrix[4][4];
+	int sum = 0;
+
+	cout << "podaj 16 liczb do macierzy 4x4:\n" << endl;
+
+	//wczytywanie macierzy i jednoczesne sumowanie
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			cin >> matrix[i][j];
+			sum += matrix[i][j];
+		}
+	}
+	cout << "suma wszystkich elementow: " << sum << endl;
+	return 0;
+
+
+	      
+	
+}
+
+zad 3 NW i nw za pomoca macierzy
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int matrix[3][3];
+	int max, min;
+
+	cout << "podaj 9 liczb do macierzy 3x3:\n";
+	//wczytywanie pierwszego elementu, aby ustawic min i max
+
+	cin >> matrix[0][0];
+	min = max = matrix[0][0];
+
+	//wczytywanie reszty macierzy
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			if (i == 0 && j == 0)
+				continue;//juz wczytane
+			cin >> matrix[i][j];
+			if (matrix[i][j] < min)min = matrix[i][j];
+			if (matrix[i][j] > max)max = matrix[i][j];
+		}
+	}
+	cout << "najmniejsza wartosc: " << min << endl;
+	cout << "najwieksza wartosc: " << max << endl;
+	return 0;
+	      
+	
+}
+zad 4 suma w wierszach
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int matrix[3][4];
+
+	cout << "podaj 12 liczb do macierzt 3x4:\n" << endl;
+
+	//wczytywanie macierzy
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 4; j++) {
+			cin >> matrix[i][j];
+		}
+	}
+	//liczenie sum dla każdego wiersza
+	for (int i = 0; i < 3; i++) {
+		int sum = 0;
+		for (int j = 0; j < 4; j++) {
+			sum += matrix[i][j];
+		}
+		cout << "suma wiersza" << i + 1 << ": " << sum << endl;
+	}
+	return 0;
+}
+zad 5 wyliczanie sum dla kolumna
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int matrix[3][3];
+
+	cout << "podaj 9 liczb do macierzy 3x3:\n" << endl;
+
+	//wczytywanie macierzy
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			cin >> matrix[i][j];
+		}
+	}
+
+	//liczenie sum dla każdej kolumny
+	cout << "\nSumy kolumn:\n" << endl;
+	for (int j = 0; j < 3; j++) {
+		int sum = 0;
+		for (int i = 0; i < 3; i++) {
+			sum += matrix[i][j];
+		}
+		cout << "suma kolumny" << j + 1 << ": " << sum << endl;
+	}
+		return 0;
+	}
+
+
+
