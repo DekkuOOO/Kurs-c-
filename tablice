@@ -124,3 +124,89 @@ int main() {
 	}
 	return 0;
 }
+zad 7 obliczanie parzystych i nie parzystych
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int numery[10];
+	int rozne[10], norma[10];
+	int a = 0, b = 0;
+
+	for (int i = 0; i < 10; i++) {
+		cout << "podaj liczbe" << i + 1 << ": " << endl;
+		cin >> numery[i];
+	}
+	for (int i = 0; i < 10; i++) {
+		if (numery[i] % 2 == 0)
+			rozne[a++] = numery[i];
+		else
+			norma[b++] = numery[i];
+	}
+	cout << "liczby parzyste: " << endl;
+	for (int i = 0; i < a; i++)
+		cout << rozne[i] << " ";
+	cout << "\n liczby nieparzyste: " << endl;
+	for (int i = 0; i < b; i++)
+		cout << norma[i] << " " << endl;
+}
+zad 8 wyszukiwanie dodatnich
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int tab[10];
+	bool pozytywne = false;
+
+	for(int i=0;i<10;i++){
+		cout << "podaj liczbe" << i + 1 << ": " << endl;
+		cin >> tab[i];
+	}
+	cout << "liczby dodatnie: " << endl;
+
+	for (int i = 0; i < 10; i++) {
+		if (tab[i] > 0) {
+			cout << tab[i] << " " << endl;
+			pozytywne = true;
+		}
+	}
+	if (!pozytywne)
+		cout << "brak dodatnich liczb na tablicy. " << endl;
+	return 0;
+}
+zad 9 sprawdzanie podobieństwa
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int tab1[5], tab2[5];
+	bool identyczne = true;
+
+	cout << "podaj piec elementow 1 tablicy.\n" << endl;
+	for (int i = 0; i < 5; i++) {
+		cin >> tab1[i];
+	}
+	cout << "podaj piec elementow 2 tablicy.\n" << endl;
+	for (int i = 0; i < 5; i++) {
+		cin >> tab2[i];
+	}
+	//sprawdzanie czy tablice sa identyczne
+	for (int i = 0; i < 5; i++) {
+		if (tab1[i] != tab2[i]) {
+			identyczne = false;
+			break;
+		}
+	}
+	if (identyczne) {
+		cout << "tablice sa identyczne.\n " << endl;
+	}
+	else
+		cout << "tablice nie sa identyczne.\n " << endl;
+	return 0;
+
+}
+zad 10
